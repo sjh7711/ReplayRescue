@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Replay Rescue</title>
+<style>body{width:330px;margin:0;padding:22px;background:#131820;color:#e4ebf3;font:14px/1.6 system-ui}h1{font-size:19px;color:#75dc8f;margin:0 0 14px}p{color:#abb9c9}button{background:#26313e;color:white;border:1px solid #506176;border-radius:5px;padding:8px 15px;cursor:pointer}small{display:block;margin-top:16px;color:#9ba9ba}.lights{display:flex;gap:26px;padding:12px 0 18px}.light{display:flex;align-items:center;gap:8px}.dot{width:13px;height:13px;border-radius:50%;background:#f05252;flex-shrink:0}.dot.on{background:#34d76a}.label{font-size:12px;color:#9ba9ba}.value{font-weight:600}</style>
+<h1>Replay Rescue</h1>
+<div class="lights"><div class="light"><span id="replay-dot" class="dot" aria-hidden="true"></span><div><div class="label" id="replay-label">Left · Instant Replay</div><div class="value" id="replay-value">Unknown</div></div></div><div class="light"><span id="connection-dot" class="dot" aria-hidden="true"></span><div><div class="label" id="connection-label">Right · Desktop app</div><div class="value" id="connection-value">Disconnected</div></div></div></div>
+<div id="status">Checking…</div><p id="domains"></p><button id="retry">Check connection</button>
+<small id="freshness"></small>
+<small id="legend"></small>
+<script src="i18n.js"></script><script src="popup.js"></script></html>

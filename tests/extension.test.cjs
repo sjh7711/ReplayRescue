@@ -1,0 +1,14 @@
+const assert = require('node:assert/strict');
+const { findBlockedDomains } = require('../extension/domain-match.js');
+const domains = ['netflix.com', 'coupangplay.com'];
+assert.deepEqual(findBlockedDomains([{url:'https://www.netflix.com/browse'}], domains), ['netflix.com']);
+assert.deepEqual(findBlockedDomains([{url:'https://netflix.com.evil.example/'},{url:'https://notnetflix.com/'}], domains), []);
+assert.deepEqual(findBlockedDomains([{url:'https://example.com/?next=netflix.com'}], domains), []);
+assert.deepEqual(findBlockedDomains([{url:'chrome://newtab/',pendingUrl:'https://www.coupangplay.com/'}], domains), ['coupangplay.com']);
+assert.deepEqual(findBlockedDomains([{url:'https://NETFLIX.COM./'}], domains), ['netflix.com']);
+assert.deepEqual(findBlockedDomains([{url:'https://netflix.com/',active:false,discarded:true}], domains), ['netflix.com']);
+assert.deepEqual(findBlockedDomains([{url:'https://netflix.com/'},{url:'https://www.netflix.com/watch/1'},{url:'https://coupangplay.com/'}], domains), ['coupangplay.com','netflix.com']);
+assert.deepEqual(findBlockedDomains([{url:'file:///netflix.com'},{url:'garbage'},{}], domains), []);
+assert.deepEqual(findBlockedDomains([{url:'https://example.com'}], ['example.com']), ['example.com']);
+assert.deepEqual(findBlockedDomains([], domains), []);
+console.log('10 domain-matching checks passed.');

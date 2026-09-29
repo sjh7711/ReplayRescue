@@ -1,0 +1,11 @@
+data/
+preview.png
+preview-update.png
+*.exe
+!/ReplayRescue.exe
+*.zip
+*.pdb
+/native-host.json
+*.tmp
+.env
+.env.*

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "version": "1.3.0",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "permissions": [
+    "tabs",
+    "nativeMessaging",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Replay Rescue",
+    "default_popup": "popup.html"
+  },
+  "incognito": "spanning",
+  "minimum_chrome_version": "120",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzrOAjhjyQnqAsSFpPJpyYSUHVrIcDh3D9N73BTHBOhGeB82bLfMaRk16LVCHCqQolRAeJ56ZEyN7rhcDyBpm3z3pL0p9/aPag3t1X/hIDObnHj9XL/agKqklZTMIheK+b2A5YOHa9f0A5lv/7tw8P/5eCm774sjhOgZNDmcf8ckDnEr0jEILIR/uIxBksOsHEXIDV4zZ+BbrHFLbNUyVCAxgWo4JVyORjIAF7l4wmsFi45iNsZyn4JUwW8xeLtp9JJvaveqlGf0Z4XnOnRTu9uVgiIbDgB5drdcCkkuv9yOLZt3/3muj3eNCFIfT6kI8Ud4eJXEa5FdQ/aduOHsccQIDAQAB"
+}
